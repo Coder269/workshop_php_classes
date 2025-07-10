@@ -1,9 +1,9 @@
 <?php
 
 //The class PHP file is required for the instantiation
-require "Amphora.php";
-require "Book.php";
-require "Counter.php";
+require "classes/Amphora.php";
+require "classes/Book.php";
+require "classes/Counter.php";
 
 //We instantiate an object with "new" and we fill its properties from the constructor defined in the class file
 $amphora = new Amphora("My Amphora", 100);
