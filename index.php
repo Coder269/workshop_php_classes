@@ -1,6 +1,6 @@
 <?php
 
-//The Class PHP file is required for the instantiation
+//The class PHP file is required for the instantiation
 require "Amphora.php";
 require "Book.php";
 require "Counter.php";
@@ -31,5 +31,4 @@ echo "J'ai change le nom du livre book au {$book->getTitle()}" . PHP_EOL;
 $counter = new Counter();
 $counter->increment();
 $counter->increment();
-
 echo $counter->getValue();
