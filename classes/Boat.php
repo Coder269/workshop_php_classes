@@ -35,4 +35,25 @@ class Boat
             echo "There are no amphoras loaded into this boat!" . PHP_EOL;
     }
 
+    public function getName(): string
+    {
+        return $this->name;
+    }
+
+    public function setName(string $name): void
+    {
+        $this->name = $name;
+    }
+
+    public function getSpeed(): int
+    {
+        return $this->speed;
+    }
+
+    public function setSpeed(int $speed): void
+    {
+        $this->speed = $speed;
+    }
+
+
 }
