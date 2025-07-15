@@ -4,7 +4,7 @@ class Boat
 {
     private string $name;
     private int $speed;
-    private array $amphora = [];
+    private array $amphoras = [];
 
     public function __construct(string $_name, int $_speed)
     {
@@ -14,16 +14,16 @@ class Boat
 
     public function load(Amphora $amphora): void
     {
-        $this->amphora[] = $amphora;
+        $this->amphoras[] = $amphora;
     }
 
     public function listCargo(): void
     {
-        if (count($this->amphora) > 0) {
+        if (count($this->amphoras) > 0) {
 
-            $countAmphora = count($this->amphora);
+            $countAmphora = count($this->amphoras);
             $totalCapacity = 0;
-            foreach ($this->amphora as $amphora) {
+            foreach ($this->amphoras as $amphora) {
                 $totalCapacity += $amphora->getCapacity();
             }
             echo "There are $countAmphora amphoras loaded into this boat!" . PHP_EOL;
