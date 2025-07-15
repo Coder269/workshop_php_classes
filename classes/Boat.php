@@ -26,7 +26,9 @@ class Boat
             foreach ($this->amphoras as $amphora) {
                 $totalCapacity += $amphora->getCapacity();
             }
+
             echo "There are $countAmphora amphoras loaded into this boat!" . PHP_EOL;
+
             echo "The total capacity of the loaded amphoras is $totalCapacity" . PHP_EOL;
 
         } else
