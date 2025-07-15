@@ -4,6 +4,7 @@
 require "classes/Amphora.php";
 require "classes/Book.php";
 require "classes/Counter.php";
+require "classes/Boat.php";
 
 //We instantiate an object with "new" and we fill its properties from the constructor defined in the class file
 $amphora = new Amphora("My Amphora", 100);
@@ -31,4 +32,10 @@ echo "J'ai change le nom du livre book au {$book->getTitle()}" . PHP_EOL;
 $counter = new Counter();
 $counter->increment();
 $counter->increment();
-echo $counter->getValue();
+echo $counter->getValue() . PHP_EOL;
+
+$anotherAmphora = new Amphora("My Amphora 2", 100);
+$boat = new Boat("My Boat", 100);
+$boat->load($amphora);
+$boat->load($anotherAmphora);
+$boat->listCargo();

@@ -6,6 +6,7 @@ class Amphora
     private int $capacity;
     private int $filling = 0; //initializing a property by default does not need to be re-initialized by a constructor evidently
     private string $label;
+    private const MAX_LABEL_LENGTH = 50;
 
     //Constructor comes after the properties
 
@@ -33,9 +34,10 @@ class Amphora
     //Getters et setters
     public function setLabel(string $labelName): void
     {
-        if (strlen($labelName) <= 100) {
+        if (strlen($labelName) <= self::MAX_LABEL_LENGTH) {
             $this->label = $labelName;
-        }
+        } else
+            echo "Label name must be less than 50 characters long!";
     }
 
     public function getLabel(): string
