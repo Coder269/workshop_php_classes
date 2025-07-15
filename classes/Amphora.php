@@ -55,7 +55,7 @@ class Amphora
         $this->capacity = $_capacity;
     }
 
-    //We use only getter for filling because we have fill/empty functions to control the its bahaviour
+    //We use only getter for the "filling" property because we have fill/empty functions to control its behavior
     public function getFilling(): int
     {
         return $this->filling;
